@@ -3,7 +3,7 @@ import style from "./header.module.scss";
 
 export default function Header() {
     return (
-        <div id={style["root"]}>
+        <header id={style["root"]}>
             <div>
                 <a href="/">
                     <img 
@@ -29,6 +29,6 @@ export default function Header() {
                     </li>
                 </ul>
             </nav>
-        </div>
+        </header>
     );
 }
