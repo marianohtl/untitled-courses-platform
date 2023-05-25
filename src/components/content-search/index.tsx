@@ -1,81 +1,39 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
+import style from "./content-search.module.scss";
 
 interface IContentSearchProps{
-    list?: SearchOption[],
-    pageSize?: 10,
     placeholder?: string,
     onSearch?: (search: string) => void,
-    onSubmitSearch?: (search: string) => void,
-    onSelectOption?: (searchItem: SearchOption) => void
+    onChange?: (search: string) => void,
 }
 
-type SearchOption = {
-    label: string,
-    value: string
-}
-
-const list = [
-    {
-        label: "abc",
-        value: "abc"
-    },
-    {
-        label: "aaa",
-        value: "aaa"
-    },
-    {
-        label: "bbb",
-        value: "bbb"
-    },
-    {
-        label: "cccc",
-        value: "cccc"
-    }
-];
-
-export default function ContentSearch({placeholder,pageSize}: IContentSearchProps)
+export default function ContentSearch(
+    { placeholder, onSearch, onChange } : IContentSearchProps
+)
 {
     const [searchingOption, setSearchingOption] = useState<string>("");
-    const [dataList, setDataList] = useState<SearchOption[]>(
-        [
-            {
-                label: "abc",
-                value: "abc"
-            }
-        ]
-    );
 
-    const filterList = function(text: string){
-        return list
-            .filter(x => x.value.includes(text))
-            .slice(0, pageSize)
-            .sort((a,b) => a.label.localeCompare(b.label));
+    const _onChange = function(event: React.ChangeEvent<HTMLInputElement>){
+        setSearchingOption(event.target.value); 
+        onChange?.(event.target.value);
     };
 
-    const onChange = function(event: React.ChangeEvent<HTMLInputElement>){
-        setDataList(filterList(event.target.value));
-        setSearchingOption(event.target.value); 
+    const _onSubmit = function(event: React.FormEvent<HTMLFormElement>){
+        event.preventDefault();
+        onSearch?.(searchingOption);
     };
 
     return (
-        <div>
+        <form onSubmit={_onSubmit}>
             <input 
-                list="search"
+                className={style["field"]}
                 type="search" 
+                autoComplete='off'
                 placeholder={placeholder}
                 value={searchingOption}
-                onChange={onChange}
+                onChange={_onChange}
             />
-            <datalist id="search">
-                {
-                    dataList.map(option =>
-                        (
-                            <option key={option.value} value={option.value}>{option.label}</option>
-                        )
-                    )
-                }
-            </datalist>
-            <button>Search</button>
-        </div>
+            <button className={style["submit-button"]}>Search</button>
+        </form>
     );
 }
