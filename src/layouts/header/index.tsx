@@ -1,23 +1,22 @@
 import React from "react";
 import style from "./header.module.scss";
+import ContentSearch from "@/components/content-search";
 
 export default function Header() {
     return (
         <header id={style["root"]}>
             <div>
-                <a href="/">
-                    <img 
-                        src="/images/mafia_duck.png" 
-                        width={48}
-                        height={48}
-                        draggable={false}
-                    />
-                </a>
-            </div>
-            <div>
                 <div>
-                    Search something ...
+                    <a href="/">
+                        <img 
+                            src="/images/mafia_duck.png" 
+                            width={48}
+                            height={48}
+                            draggable={false}
+                        />
+                    </a>
                 </div>
+                <ContentSearch placeholder="Search something..." /> 
             </div>
             <nav>
                 <ul>

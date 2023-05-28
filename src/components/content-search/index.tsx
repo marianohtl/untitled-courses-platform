@@ -24,16 +24,26 @@ export default function ContentSearch(
     };
 
     return (
-        <form onSubmit={_onSubmit}>
-            <input 
-                className={style["field"]}
-                type="search" 
-                autoComplete='off'
-                placeholder={placeholder}
-                value={searchingOption}
-                onChange={_onChange}
-            />
-            <button className={style["submit-button"]}>Search</button>
+        <form 
+            className={style["root"]} 
+            onSubmit={_onSubmit}
+        >
+            <div className={style["field"]} >
+                <input 
+                    className={style["input"]}
+                    type="search" 
+                    autoComplete='off'
+                    placeholder={placeholder}
+                    value={searchingOption}
+                    onChange={_onChange}
+                />
+                <button 
+                    className={style["submit-button"]} 
+                    type="submit"
+                >
+                    <span className="material-symbols-outlined">search</span>
+                </button>
+            </div>
         </form>
     );
 }

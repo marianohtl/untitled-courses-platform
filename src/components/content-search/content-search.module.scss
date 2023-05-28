@@ -1,9 +1,55 @@
+$base-color: #000000;
+$font-color: white;
+$default-color:rgba($base-color, $alpha: 0.2);
+$hover-color: rgba($base-color, $alpha: 0.1);
+$active-color: rgba($base-color, $alpha: 0.3);
+
+.root{
+    width: 500px;
+}
+
 .field{
-    font-size: 24px;
-    font-weight: 300;
+    display: flex;
+    align-items: stretch;
+    
+    &:hover{
+        .submit-button{
+            background-color: $hover-color;
+        }
+
+        .input{
+            border: 1px solid $hover-color;
+        }
+    }
+
+    &:active{
+        .submit-button{
+            background-color: $active-color;
+        }
+
+        .input{
+            border: 1px solid $active-color;
+        }
+    }
+}
+
+.input{
     font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    border: 1px solid $default-color;
+    padding: 10px;
+    outline: none;
+    flex-grow: 1;
 }
 
 .submit-button{
-    
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+    background-color: $default-color;
+    cursor: pointer;
+    color: $font-color;
 }
