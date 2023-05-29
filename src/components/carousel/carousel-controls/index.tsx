@@ -9,7 +9,7 @@ interface ICarouselControlsProps{
 
 export default function CarouselControls({ onBack, onNext }: ICarouselControlsProps){
     return (
-        <div className={style.buttons}>
+        <div className={style.root}>
             <button className={`${style.button} ${style.previous}`} type="button" value="previous" onClick={onBack}>
                 <span className="material-symbols-outlined">
                     navigate_before

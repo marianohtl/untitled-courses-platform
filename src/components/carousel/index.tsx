@@ -12,7 +12,12 @@ export function Carousel({ children, interval }: ICarouselProps)
 {
     const onPress = function(event: FormEvent<HTMLButtonElement>){
         event.preventDefault();
-        console.log(event.currentTarget.value);
+
+        if(event.currentTarget.value == "next"){
+            console.log(event.currentTarget.value);
+        }else{
+            console.log("previous");
+        }
     };
 
     return (
