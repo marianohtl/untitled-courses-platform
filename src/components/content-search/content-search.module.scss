@@ -49,9 +49,10 @@ $active-color: rgba($base-color, $alpha: 0.3);
     align-items: center;
     font-size: 1.5rem;
     font-weight: 100;
+    background-color: $default-color;
+    color: $font-color;
     border: none;
     border-radius: 0px 8px 8px 0px;
-    background-color: $default-color;
+    outline: none;
     cursor: pointer;
-    color: $font-color;
 }

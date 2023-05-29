@@ -8,7 +8,7 @@ import style from "./banner.module.scss";
 export default function Banner(){
     return (
         <div id={style["root"]}>
-            <Carousel timeout={1000}>
+            <Carousel interval={1000}>
                 <CarouselItem background="https://placehold.co/1920x796/000000/FFFFFF.png">
                     <p>AAA</p>
                 </CarouselItem>

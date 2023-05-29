@@ -1,28 +1,25 @@
-import React, { ReactElement, useState } from "react";
+import React, { FormEvent, ReactElement } from "react";
 import { ICarouselItemProps } from "./carousel-item";
+import CarouselControls from "./carousel-controls";
 import style from "./carousel.module.scss";
 
 interface ICarouselProps {
     children: ReactElement<ICarouselItemProps> | ReactElement<ICarouselItemProps>[],
-    timeout: number
+    interval: number
 }
 
-export function Carousel({children}: ICarouselProps)
+export function Carousel({ children, interval }: ICarouselProps) 
 {
+    const onPress = function(event: FormEvent<HTMLButtonElement>){
+        event.preventDefault();
+        console.log(event.currentTarget.value);
+    };
+
     return (
         <div className={style.root}>
-            <div className={style.buttons}>
-                <button className={`${style.button} ${style.previous}`}>
-                    <span className="material-symbols-outlined">
-                        navigate_before
-                    </span>
-                </button>
-                <button className={`${style.button} ${style.next}`}>
-                    <span className="material-symbols-outlined">
-                        navigate_next
-                    </span>
-                </button>
-            </div>
+            {
+                Array.isArray(children) && (<CarouselControls onBack={onPress} onNext={onPress}/>)
+            }
             <div className={style.content}>
                 {children}
             </div>
