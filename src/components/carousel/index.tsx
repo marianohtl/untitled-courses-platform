@@ -8,14 +8,14 @@ interface ICarouselProps {
     interval: number
 }
 
-export function Carousel({ children, interval }: ICarouselProps) 
-{
-    const onPress = function(event: FormEvent<HTMLButtonElement>){
+export function Carousel({ children }: ICarouselProps) {
+
+    const onPress = function (event: FormEvent<HTMLButtonElement>) {
         event.preventDefault();
 
-        if(event.currentTarget.value == "next"){
+        if (event.currentTarget.value == "next") {
             console.log(event.currentTarget.value);
-        }else{
+        } else {
             console.log("previous");
         }
     };
@@ -23,11 +23,21 @@ export function Carousel({ children, interval }: ICarouselProps)
     return (
         <div className={style.root}>
             {
-                Array.isArray(children) && (<CarouselControls onBack={onPress} onNext={onPress}/>)
+                Array.isArray(children) ?
+                    (
+                        <>
+                            <CarouselControls onBack={onPress} onNext={onPress} />
+                            <div className={style.content}>
+                                {children}
+                            </div>
+                        </>
+                    ) :
+                    (
+                        <div className={style.content}>
+                            {children}
+                        </div>
+                    )
             }
-            <div className={style.content}>
-                {children}
-            </div>
         </div>
     );
 }

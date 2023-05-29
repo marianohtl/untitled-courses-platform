@@ -22,9 +22,7 @@ export default function CarouselItem({children, background}: ICarouselItemProps)
         );
     }else{
         return (
-            <div 
-                className={style.root}
-            >
+            <div className={style.root}>
                 <div className={style.content}>
                     {children}
                 </div>
