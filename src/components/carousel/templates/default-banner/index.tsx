@@ -31,8 +31,8 @@ export default function CarouselDefaultBanner({
                     <div className={style["text"]}>
                         <div>
                             {
-                                textData.map((text) => (
-                                    <p key={text.split(" ")[0]}>{text}</p>
+                                textData.map((text, index) => (
+                                    <p key={text.split(" ")[0] + "_" + index}>{text}</p>
                                 ))
                             }
                         </div>
@@ -43,8 +43,8 @@ export default function CarouselDefaultBanner({
                                     <ul>
                                         {
                                             buttons?.map(
-                                                button => (
-                                                    <li key={button.url}>
+                                                (button, index) => (
+                                                    <li key={button.name + "_" + index}>
                                                         <a href={button.url}>{button.name}</a>
                                                     </li>
                                                 )
