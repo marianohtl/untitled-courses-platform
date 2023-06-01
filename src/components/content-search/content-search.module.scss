@@ -4,6 +4,7 @@ $default-color:rgba($base-color, $alpha: 0.2);
 $hover-color: rgba($base-color, $alpha: 0.1);
 $active-color: rgba($base-color, $alpha: 0.3);
 
+
 .root{
     width: 500px;
 }
@@ -35,7 +36,7 @@ $active-color: rgba($base-color, $alpha: 0.3);
 
 .input{
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     border: 1px solid $default-color;
     padding: 10px;
@@ -46,10 +47,12 @@ $active-color: rgba($base-color, $alpha: 0.3);
 .submit-button{
     display: flex;
     align-items: center;
+    font-size: 1.5rem;
     font-weight: 100;
+    background-color: $default-color;
+    color: $font-color;
     border: none;
     border-radius: 0px 8px 8px 0px;
-    background-color: $default-color;
+    outline: none;
     cursor: pointer;
-    color: $font-color;
 }
