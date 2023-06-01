@@ -9,7 +9,10 @@ export default function Banner(){
     return (
         <div id={style.root}>
             <Carousel interval={1000}>
-                <CarouselDefaultBanner image="https://placehold.co/1920x1080/000000/FFFFFF.png" />
+                <CarouselDefaultBanner 
+                    background="https://placehold.co/1920x750/FFFFFF/F6F6F6.png" 
+                    image="https://placehold.co/640x480/000000/FFFFFF.png" 
+                />
             </Carousel>
         </div>
     );
