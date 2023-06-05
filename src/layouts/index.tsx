@@ -1,11 +1,12 @@
 import Header from "./header";
 import React, { ReactNode } from "react";
+import Footer from "./footer";
 
-type Props = {
+type ILayoutProps = {
     children: ReactNode | ReactNode[]
 }
 
-export default function Layout({ children } : Props)
+export default function Layout({ children } : ILayoutProps)
 {
     return (
         <>
@@ -13,6 +14,7 @@ export default function Layout({ children } : Props)
             <main>
                 {children}
             </main>
+            <Footer />
         </>
     );
 }
