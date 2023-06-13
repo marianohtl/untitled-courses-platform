@@ -1,0 +1,42 @@
+:root{
+    --color-white: white;
+    --color-black: black;
+
+    --color-gray-100: #e6e6e6;
+    --color-gray-500: #cccccc;
+    --color-gray-700: #b3b3b3;
+    --color-gray-900: darkgray;
+
+    --color-red-100: lightcoral;
+    --color-red-500: red;
+    --color-red-900: darkred;
+
+    --color-green-100: lightgreen;
+    --color-green-500: green;
+    --color-green-900: darkgreen;
+
+    --color-blue-100: aliceblue;
+    --color-blue-200: lightblue;
+    --color-blue-500: blue;
+    --color-blue-900: darkblue;
+
+    --color-cyan-100: lightcyan;
+    --color-cyan-500: cyan;
+    --color-cyan-900: darkcyan;
+
+    --color-pink-100: lightpink;
+    --color-pink-500: pink;
+    --color-pink-900: darkorchid;
+
+    --color-purple-100: plum;
+    --color-purple-500: purple;
+    --color-purple-900: darkmagenta;
+
+    --color-orange-100: lightsalmon;
+    --color-orange-500: orange;
+    --color-orange-900: darkorange;
+    
+    --color-yellow-100: lightgoldenrodyellow;
+    --color-yellow-500: yellow;
+    --color-yellow-900: darkgoldenrod;
+}
