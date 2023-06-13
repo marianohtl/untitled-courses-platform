@@ -12,7 +12,7 @@ input:hover{
 }
 
 input:active{
-    border: 1px solid var(--color-gray-700);
+    border: 1px solid var(--color-gray-600);
 }
 
 input[type="submit"]{

@@ -1,5 +1,7 @@
-$font-color: gray;
-$hover-font-color: darkgray;
+$background-color: var(--color-primary);
+$font-color: var(--color-gray-900);
+$hover-font-color: var(--color-gray-700);
+$active-font-color: var(--color-black);
 
 #root{
     display: flex;
@@ -7,7 +9,7 @@ $hover-font-color: darkgray;
     align-items: center;
     margin: 0;
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: $background-color;
     color: $font-color;
 
     ul{
@@ -27,14 +29,13 @@ $hover-font-color: darkgray;
         font-family: Arial, Helvetica, sans-serif;
         padding: 10px 10px;
         color: $font-color;
-        text-decoration: none;
 
         &:hover{
             color: $hover-font-color;
         }
 
         &:active{
-            color: black;
+            color: $active-font-color;
         }
     }
 }
