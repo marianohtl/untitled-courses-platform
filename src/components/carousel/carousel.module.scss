@@ -1,0 +1,16 @@
+$button-color: rgba(255, 255, 255, 0.1);
+$button-hover-color: rgba(255, 255, 255, 0.1);
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+.root{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px 0px $shadow-color;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+}
