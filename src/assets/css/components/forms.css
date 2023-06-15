@@ -1,24 +1,61 @@
+:root{
+    /* INPUT */
+    --border-color-input-primary:           var(--color-gray-500);
+    --color-input-primary:                  var(--color-black);
+
+    --border-color-input-primary--hover:    var(--color-gray-100);
+    --color-input-primary--hover:           var(--color-black);
+    
+    --border-color-input-primary--active:   var(--color-gray-900);
+    --color-input-primary--active:          var(--color-black);
+
+    /* SUBMIT */
+    --bg-color-submit-primary:              var(--color-gray-500);
+    --color-submit-primary:                 var(--color-black);
+
+    --bg-color-submit-primary--hover:       var(--color-gray-100);
+    --color-submit-primary--hover:          var(--color-black);
+
+    --bg-color-submit-primary--active:      var(--color-gray-900);
+    --color-submit-primary--active:         var(--color-white);
+}
+
 input{
     font-size: 0.75rem;
-
-    border: 1px solid var(--color-gray-500);
+    color: var(--color-input-primary);    
+    border: 1px solid var(--border-color-input-primary);
     padding: 10px;
     outline: none;
     font-weight: 300;
 }
 
 input:hover{
-    border: 1px solid var(--color-gray-100);
+    color: var(--color-input-primary--hover);
+    border: 1px solid var(--border-color-input-primary--hover);
 }
 
 input:active{
-    border: 1px solid var(--color-gray-900);
+    color: var(--color-input-primary--active);
+    border: 1px solid var(--border-color-input-primary--active);
 }
 
 input[type="submit"]{
-    background-color: var(--color-gray-500);
-    color: var(--color-black);
+    color: var(--color-submit-primary);
+    background-color: var(--bg-color-submit-primary);
+    border: none;
     border-radius: 3px;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--bg-color-submit-primary--hover);
+    color: var(--color-submit-primary--hover);
+    border: none;
+}
+
+input[type="submit"]:active{
+    background-color: var(--bg-color-submit-primary--active);
+    color: var(--color-submit-primary--active);
+    border: none;
 }
 
 input[type="submit"]:hover, 
