@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./header.module.scss";
-import ContentSearch from "@/components/content-search";
+import ContentSearch from "@components/content-search";
 
 interface IHeaderButtonProps {
     label: string,

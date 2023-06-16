@@ -1,0 +1,26 @@
+@import url("./colors.css");
+
+:root{
+    --color-primary:        var(--color-blue-100);
+    --color-primary-dark:   var(--color-blue-400);
+    --color-primary-light:  var(--color-gray-100);
+    
+    --color-secondary: white;
+    --color-secondary-dark: white;
+    --color-secondary-light: white;
+
+    --color-link: white;
+    --color-link--hover: white;
+    --color-link--active: white;
+    --color-link--visited: white;
+ 
+    --color-link-dark: white;
+    --color-link-dark--hover: white;
+    --color-link-dark--active: white;
+    --color-link-dark--visited: white;
+
+    --color-link-light: white;
+    --color-link-light--hover: white;
+    --color-link-light--active: white;
+    --color-link-light--visited: white;
+}

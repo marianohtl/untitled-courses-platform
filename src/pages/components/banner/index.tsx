@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Carousel } from "@/components/carousel";
-import CarouselDefaultBanner from "@/components/carousel/templates/default-banner";
+import { Carousel } from "@components/carousel";
+import CarouselDefaultBanner from "@components/carousel/templates/default-banner";
 
 import style from "./banner.module.scss";
 
